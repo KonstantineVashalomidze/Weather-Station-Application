@@ -1,4 +1,4 @@
-public class CurrentConditionsDisplay implements Observer{
+public class CurrentConditionsDisplay implements Observer, Component{
     private float temperature;
     private float humidity;
 
@@ -9,7 +9,7 @@ public class CurrentConditionsDisplay implements Observer{
         this.humidity = humidity;
         display();
     }
-
+    @Override
     public void display() {
         System.out.println("Current conditions: " + temperature + "F degrees and " + humidity + "% humidity");
     }

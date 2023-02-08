@@ -1,4 +1,4 @@
-public class StatisticsDisplay implements Observer{
+public class StatisticsDisplay implements Observer, Component{
     private float maxTemp = 0.0f;
     private float minTemp = 200;
     private float tempSum= 0.0f;
@@ -20,6 +20,7 @@ public class StatisticsDisplay implements Observer{
         display();
     }
 
+    @Override
     public void display() {
         System.out.println("Avg/Max/Min temperature = " + (tempSum / numReadings) + "/" + maxTemp + "/" + minTemp);
     }
